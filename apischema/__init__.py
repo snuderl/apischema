@@ -59,13 +59,6 @@ from .utils import identity
 from .validation import ValidationError, validator
 from .visitor import Unsupported
 
-try:
-    from . import graphql  # noqa: F401
-
-    __all__.append("graphql")
-except ImportError:
-    pass
-
 
 def __getattr__(name):
     if name == "graphql":
